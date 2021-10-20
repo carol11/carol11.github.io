@@ -118,4 +118,28 @@ https://templatemo.com/tm-550-diagoona
     <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/templatemo-script.js"></script>
 </body>
+
+
+
+<?php
+
+  $name = $_POST['name'];
+  $visitor_email = $_POST['email'];
+  $message = $_POST['message'];
+
+	$email_from = 'carol@hannalaw.net';
+
+	$email_subject = "New HannaLaw.Net Email Submission";
+
+	$email_body = "You have received a new message from the user $name.\n": <br><br><br>
+	Email:<br><br>		$visitor_email 
+<br><br><br>
+             Message: <br><br>  $message" 
+?>
+
+
+
+
+
+
 </html>
