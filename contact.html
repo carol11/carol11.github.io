@@ -75,8 +75,11 @@ https://templatemo.com/tm-550-diagoona
 
 <b>Email: carol@hannalaw.net </b></p>
 
+                     
+			<!-- <form enctype="text/plain" id="contact-form" action="mailto:carol@hannalaw.net?subject=New Client Inquiry" method="POST"> -->
 
-                        <form id="form" onchange="mail()" method="POST">
+
+                        <form id="form" onchange="mail()" action="mail()" method="POST">
                             <div class="form-group mb-4">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
                             </div>
@@ -121,20 +124,16 @@ https://templatemo.com/tm-550-diagoona
 
 <script>
 
-
-
-	function mail() {
+	function mail() 
+	{
 		var name = form.name.value;
 		var phone = form.phone.value;
 		var email = form.email.value;
 		var message = form.message.value;
 
-	var str = "Name: " + name + \n + "Phone: " + \n = "Email: " \n + "Message: " \n \n ;
+		var str = "Name: " + name + \n + "Phone: " + \n = "Email: " \n + "Message: " \n \n ;
 
-
-         window.location.href = "mailto:carol@hannalaw.net?subject=New Client Inquiry&body=" + str;
-
-
+         	window.location.href = "mailto:carol@hannalaw.net?subject=New Client Inquiry&body=" + str
 	}
 
 </script>
