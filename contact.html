@@ -89,7 +89,7 @@ https://templatemo.com/tm-550-diagoona
                                 <textarea rows="6" name="message" class="form-control" placeholder="How can we help you?" required=""></textarea>
                             </div>
                             <div class="text-right">
-                               <button id="send" class="btn btn-big btn-primary"><b>Send</b></button>
+                               <button id="send" onclick="javascript: mail();"  class="btn btn-big btn-primary"><b>Send</b></button>
                             </div>
                         </form>
                     </section>
@@ -99,7 +99,7 @@ https://templatemo.com/tm-550-diagoona
 
 
 <script>
-	function mail(form) {
+	function mail() {
 		var name = form.name.value;
 		var phone = form.phone.value;
 		var email = form.email.value;
@@ -110,12 +110,8 @@ https://templatemo.com/tm-550-diagoona
 
 	str += "Name: " + name + \n + "Phone: " + \n = "Email: " \n + "Message: " \n \n ;
 
-$(document).ready(function() {
-    $("#send").click(function()
-     {
+
          window.location.href = str;
-     });
-});​
 
 	}
 
