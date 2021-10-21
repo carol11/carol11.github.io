@@ -17,6 +17,25 @@ TemplateMo 550 Diagoona
 https://templatemo.com/tm-550-diagoona
 
 -->
+
+
+<script>
+
+	function sendMail() 
+	{
+		var name = mailForm.name.value;
+		var phone = mailForm.phone.value;
+		var email = mailForm.email.value;
+		var message = mailForm.message.value;
+
+		var str = "Name: " + name + \n + "Phone: " + \n = "Email: " \n + "Message: " \n \n ;
+
+         	window.location.href = "mailto:carol@hannalaw.net?subject=New Client Inquiry&body=" + str
+	}
+
+</script>
+
+
 </head>
 <body>
     <div class="tm-container">
@@ -79,7 +98,7 @@ https://templatemo.com/tm-550-diagoona
 			<!-- <form enctype="text/plain" id="contact-form" action="mailto:carol@hannalaw.net?subject=New Client Inquiry" method="POST"> -->
 
 
-                        <form id="form" onchange="mail()" action="mail()" method="POST">
+                        <form id="mailForm" onclick="sendMail()" method="POST">
                             <div class="form-group mb-4">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
                             </div>
@@ -121,22 +140,6 @@ https://templatemo.com/tm-550-diagoona
             <div class="tm-bg-right"></div>
         </div>
     </div>
-
-<script>
-
-	function mail() 
-	{
-		var name = form.name.value;
-		var phone = form.phone.value;
-		var email = form.email.value;
-		var message = form.message.value;
-
-		var str = "Name: " + name + \n + "Phone: " + \n = "Email: " \n + "Message: " \n \n ;
-
-         	window.location.href = "mailto:carol@hannalaw.net?subject=New Client Inquiry&body=" + str
-	}
-
-</script>
 
 
 <!-- action="mailto:carol@hannalaw.net?subject=New Client Inquiry" method="POST" --> 
