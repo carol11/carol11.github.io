@@ -76,7 +76,7 @@ https://templatemo.com/tm-550-diagoona
 <b>Email: carol@hannalaw.net </b></p>
 
 
-                        <form enctype="text/plain" id="form" onchange="mail(this)">
+                        <form id="form">
                             <div class="form-group mb-4">
                                 <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
                             </div>
@@ -90,7 +90,7 @@ https://templatemo.com/tm-550-diagoona
                                 <textarea rows="6" name="message" class="form-control" placeholder="How can we help you?" required=""></textarea>
                             </div>
                             <div class="text-right">
-                               <button id="send" class="btn btn-big btn-primary"><b>Send</b></button>
+                               <button id="send" onclick="redirect()" class="btn btn-big btn-primary"><b>Send</b></button>
                             </div>
                         </form>
                     </section>
@@ -120,7 +120,16 @@ https://templatemo.com/tm-550-diagoona
     </div>
 
 <script>
-	function mail(form) {
+
+
+
+function redirect()
+{
+    window.location.href = "mailto:mail@example.org";
+}
+
+
+	function mail() {
 		var name = form.name.value;
 		var phone = form.phone.value;
 		var email = form.email.value;
